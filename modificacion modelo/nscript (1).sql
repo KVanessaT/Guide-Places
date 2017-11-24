@@ -40,17 +40,9 @@ id_infcom int not null auto_increment,
 id_lugar int not null,
 id_provincia int not null,
 id_detalle  int,
+datosgoogle varchar (1000) not null,
 PRIMARY KEY (id_infcom )
 );
-
-/*CREATE TABLE ADDINFO (
-id_addinfo int not null auto_increment, 
-id_infcom int,
-id_lugar int,
-id_provincia int,
-id_detalle int,
-PRIMARY KEY (id_addinfo )
-);*/
 
 ALTER TABLE REGISTRO
 ADD CONSTRAINT R_1 
@@ -71,23 +63,3 @@ ALTER TABLE INFORMACION_COMPLETA
 ADD CONSTRAINT R_4
 FOREIGN KEY (id_detalle) 
 REFERENCES DETALLES (id_detalle);
-
-/*ALTER TABLE ADDINFO
-ADD CONSTRAINT R_5
-FOREIGN KEY (id_infcom) 
-REFERENCES INFORMACION_COMPLETA (id_infcom);
-
-ALTER TABLE ADDINFO
-ADD CONSTRAINT R_6
-FOREIGN KEY (id_lugar) 
-REFERENCES LUGARES (id_lugar);
-
-ALTER TABLE ADDINFO
-ADD CONSTRAINT R_7
-FOREIGN KEY (id_provincia) 
-REFERENCES PROVINCIAS (id_provincia);
-
-ALTER TABLE ADDINFO
-ADD CONSTRAINT R_8
-FOREIGN KEY (id_detalle) 
-REFERENCES DETALLES (id_detalle);*/
