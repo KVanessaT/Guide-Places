@@ -44,22 +44,22 @@ datosGoogle varchar (1000) not null,
 PRIMARY KEY (idInfcom )
 );
 
-ALTER TABLE REGISTRO
+ALTER TABLE Registro
 ADD CONSTRAINT R_1 
 FOREIGN KEY (idUsuario) 
-REFERENCES USUARIOS (idUsuario);
+REFERENCES Usuarios (idUsuario);
 
 ALTER TABLE InformacionCompleta
 ADD CONSTRAINT R_2 
 FOREIGN KEY (idLugar) 
-REFERENCES LUGARES (idLugar);
+REFERENCES Lugares (idLugar);
 
 ALTER TABLE InformacionCompleta
 ADD CONSTRAINT R_3
 FOREIGN KEY (idProvincia) 
-REFERENCES PROVINCIAS (idProvincia);
+REFERENCES Provincia (idProvincia);
 
 ALTER TABLE InformacionCompleta
 ADD CONSTRAINT R_4
 FOREIGN KEY (idDetalle) 
-REFERENCES DETALLES (idDetalle);
+REFERENCES Detalles (idDetalle);
