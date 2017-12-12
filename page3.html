@@ -6,12 +6,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./libs/kendo/style/kendo.common.min.css">
+    <link rel="stylesheet" href="./libs/kendo/style/kendo.default.min.css">
+    <link rel="stylesheet" href="./libs/kendo/style/kendo.default.mobile.min.css">
+    <link rel="stylesheet" href="./libs/kendo/style/kendo.rtl.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./libs/kendo/kendo.all.min.js"></script>
 </head>
 
 <body>
-
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -19,7 +23,7 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Principal</a></li>
-                <li><a href="#">Destinos</a></li>
+                <li><a href="page1.html">Destinos</a></li>
                 <li><a href="#">Mas buscados</a></li>
                 <li><a href="#">Contribuir</a></li>
             </ul>
@@ -30,37 +34,80 @@
         </div>
     </nav>
 
+    <h2>Bienvenido, gracias por ayudarnos a difundir el turismo en Ecuador.</h2>
 
-
-    <div class="container">
-        <h2>Bienvenido, gracias por ayudarnos a difundir el turismo en Ecuador.</h2>
-        <br>
-        <br>
-
-        <form action="/action_page.php">
+    <div class="row">
+        <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-6 col-lg-6">
             <div class="form-group">
-                <label for="nombreDestino">Ingresa el nombre del Destino:</label>
-                <input type="nombreDestino" class="form-control" id="nombreDestino" placeholder="nombre del destino" name="nombreDestino">
+                <label>Id</label>
+                <input type="text" class="form-control" id="id" placeholder="numero de id">
             </div>
             <div class="form-group">
-                <label for="provincia">Provincia en la que se encuentra:</label>
-                <input type="provincia" class="form-control" id="provincia" placeholder="Ingresa la provincia" name="provincia">
+                <label>Lugar</label>
+                <input type="text" class="form-control" id="lugar" placeholder="Ingresa el nombre del lugar">
             </div>
             <div class="form-group">
-                <label for="detalles">Detalles, breve descripcion del sitio:</label>
-                <input type="detalles" class="form-control" id="detalles" placeholder="Ingresa los detalles" name="detalles">
+                <label>Provincia</label>
+                <input type="text" class="form-control" id="provincia" placeholder="Ingresa la provincia en la que se encuentra">
+            </div>
+            <div class="form-group">
+                <label>Detalles</label>
+                <input type="text" class="form-control" id="descripción" placeholder="Ingresa una descripción del lugar">
+            </div>
+            <!-- <div class="form-group">
+                <label>BUSCAR</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                    <input type="text" class="form-control" id="descripcionBuscar" placeholder="Descripción" onkeyup="leerfiltrado()">
+                </div>
             </div>
 
-        </form>
-    </div>
-    <div class="form-group">
+            <div class="form-group">
 
-        <label for="exampleInputFile">
+                <label for="exampleInputFile">
                AGREGAR UNA IMAGEN
            </label>
-        <input type="file" id="exampleInputFile" />
-    </div>
-    <button type="submit" class="btn btn-default">GUARDAR</button>
+                <input type="file" id="exampleInputFile" />
+            </div>
+            <button type="submit" class="btn btn-default">GUARDAR</button> -->
+            <div class="form-group">
+                <input type="text" id="datePickerKendo" placeholder="Fecha" style="width:100%" ;>
+            </div>
+
+            <div class="form-group">
+                <div id="tablaKendo">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-info" onclick="leer()">
+                        <span class="glyphicon glyphicon-refresh"></span>&nbsp;LEER
+                    </button>
+                        <button type="button" class="btn btn-success" onclick="crear()">
+                        <span class="glyphicon glyphicon-plus"></span>&nbsp;CREAR
+                    </button>
+                        <button type="button" class="btn btn-warning" onclick="actualizar()">
+                        <span class="glyphicon glyphicon-ok"></span>&nbsp;ACTUALIZAR
+                    </button>
+                        <button type="button" class="btn btn-danger" onclick="borrar()">
+                        <span class="glyphicon glyphicon-minus"></span>&nbsp;BORRAR
+                    </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="respuesta">
+                        Datos Obtenidos
+                    </div>
+                </div>
+            </div>
 </body>
 
 </html>

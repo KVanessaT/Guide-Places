@@ -1,9 +1,48 @@
 var urlWS = "";
 $(document).ready(function() {
-    urlWS = "http://infguide.byethost7.com";
+    urlWS = "//infguide.byethost7.com/server/";
     leer(1);
-
+    crearTablaKendo();
 });
+
+function crearTablaKendo() {
+    $("#tablaKendo").kendoGrid({
+        dataSource: {
+            pageSize: 5,
+            transport: {
+                read: {
+                    url: urlWS + "lugares/put",
+                    dataType: "json"
+                }
+            }
+        },
+        columns: [
+            { field: "identification", title: "Id" },
+            { field: "nombreLugar", title: "Lugares" },
+            { field: "nombreProvincia", title: "Provincias" },
+            { field: "descripcion", title: "Detalles" }
+        ],
+        pageable: true,
+        selectable: true,
+        filterable: {
+            mode: "row",
+            extra: false,
+            operators: {
+                String: {
+                    contains: "Contains"
+                }
+            }
+        },
+        change: itemSeleccionado
+    });
+}
+
+function itemSeleccionado() {
+    var datos = $("#tablaKendo").data("kendoGrid");
+    var selectedItem = datos.dataItem(datos.select());
+    alert('El nombre de la provincia en donde se encuentra  ' + selectedItem.nombreLugar + ' esta en la provincia de' + selectedItem.nombreProvincia + ' y tiene la siguiente descripcion' + selectedItem.descripcion + '  es: ' + selectedItem.identificacion);
+}
+
 
 function leer(id) {
     if (id == 0) {
@@ -47,7 +86,7 @@ function borrar() {
     leer(1);
 }
 
-function crear() {
+function crear(id) {
     id = document.getElementById("id").value;
     descripcion = document.getElementById("nombreLugar").value;
     urltorequest = urlWS + "nombreLugar/crear";
@@ -64,7 +103,7 @@ function crear() {
             }
         }
     });
-    leer(1);
+    leer();
 }
 
 function actualizar() {
