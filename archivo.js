@@ -16,6 +16,7 @@ function crearTablaKendo() {
                 }
             }
         },
+
         columns: [
             { field: "identification", title: "Id" },
             { field: "nombreLugar", title: "Lugares" },
