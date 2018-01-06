@@ -1,0 +1,83 @@
+<html lang="en" ng-app="myApp">
+
+<head>
+    <title>registrarse</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-escale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery-3.2.1.slim.min"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrap-social.css"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <center>
+        <p></p>
+        <p></p>
+        <p></p>
+        <img src="./imagenes/turismoecuador.jpg" height=200 width=300/>
+    </center>
+    <div class="jumbotron boxlogin">
+        <center>
+            <div class="alert alert-success" role="alert">
+                <strong>Regístrate con tu dirección de email</strong>
+            </div>
+        </center>
+        <form ng-submit="addEmployee()">
+            <p id="profile-name" class="profile-name-card"></p>
+
+
+            <div class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email" ng-model="registro.inputEmail" required autofocus>
+                </dic>
+
+
+                <div class="form-signin">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                </div>
+
+                <div class="form-signin">
+                    <span id="reauth-email" class="reauth-email"></span>
+                    <input type="password" id="inputPassword" class="form-control" placeholder=" Confirmar Password" ng-model="registro.inputPassword"
+                        required autofocus>
+                </div>
+
+
+
+                <div class="form-signin">
+                    <input type="text" id="inputName" class="form-control" placeholder="Usuario" ng-model="registro.inputName" required>
+                </div>
+
+
+
+
+                <div class="alert alert-warning" role="alert">
+                    Al hacer click en Registrarse, aceptas los términos y condiciones.
+                </div>
+
+                <center>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="location='contribuir.html'">Registrarse</button>
+                </center>
+
+                <p></p>
+
+        </form>
+        <!-- /form -->
+        <a href="ingresar.html" class="forgot-password" style="color:green">
+            Iniciar sesión
+        </a>
+        </div>
+
+
+
+</body>
+
+</html>
