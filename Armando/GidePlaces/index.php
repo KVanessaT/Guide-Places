@@ -15,9 +15,9 @@ if($totalproductos>0){
              <div class="col-md-4">
              <h3>'.$fila['idUsuarios'].'</h3>
 <h3>'.$fila['Nombres'].'</h3>
-<h3>'.$fila['Apellidos'].'</h3>
 <p>'.$fila['Cedula'].'</p>
 <p>'.$fila['Correo'].'</p>
+<p>'.$fila['idCargo'].'</p>
              </div>
              <div class="col-md-4">
              </div>

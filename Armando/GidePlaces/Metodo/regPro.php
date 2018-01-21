@@ -10,7 +10,7 @@ if(!$IdProvincia=="" && !$Provincia==""){
     $verificar=  ejecutarSQL::consultar("select * from Provincia where idProvincia='".$IdProvincia."'");
     $verificaltotal = mysql_num_rows($verificar);
     if($verificaltotal<=0){
-        if(consultasSQL::InsertSQL("Provincia", "idProvincia, Provincia", "'$IdProvincia','$Provincia'")){
+        if(consultasSQL::InsertSQL("Provincia", "idProvincia, Nombre", "'$IdProvincia','$Provincia'")){
             echo '<br>El registro se completo con éxito';
         }else{
            echo '<br>Ha ocurrido un error.<br>Por favor intente nuevamente'; 

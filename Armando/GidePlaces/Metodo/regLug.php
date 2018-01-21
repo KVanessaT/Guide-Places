@@ -6,14 +6,14 @@ sleep(3);
 $IdLugar= $_POST['IdLugar'];
 $Nombre= $_POST['Nombre'];
 $Descripcion= $_POST['Descripcion'];
-$Imagen= $_POST['Imagen'];
+$Ubicacion= $_POST['Ubicacion'];
 $IdProvincia= $_POST['idProvincia'];
 
-if(!$IdLugar=="" && !$Nombre=="" && !$Imagen=="" && !$IdProvincia=="" && !$Descripcion==""){
+if(!$IdLugar=="" && !$Nombre=="" && !$Ubicacion=="" && !$IdProvincia=="" && !$Descripcion==""){
     $verificar=  ejecutarSQL::consultar("select * from Lugares where IdLugares='".$IdLugar."'");
     $verificaltotal = mysql_num_rows($verificar);
     if($verificaltotal<=0){
-        if(consultasSQL::InsertSQL("Lugares", "IdLugares, Nombre, Descripcion, Imagen, idProvincia", "'$IdLugar','$Nombre','$Imagen','$IdProvincia', '$Descripcion'")){
+        if(consultasSQL::InsertSQL("Lugares", "IdLugares, Nombre, Descripcion, Ubicacion, idProvincia", "'$IdLugar','$Nombre','$Descripcion','$Ubicacion','$IdProvincia'")){
             echo '<br>El registro se completo con éxito';
         }else{
            echo '<br>Ha ocurrido un error.<br>Por favor intente nuevamente'; 

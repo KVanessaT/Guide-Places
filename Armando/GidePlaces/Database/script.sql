@@ -5,20 +5,18 @@ CREATE TABLE  `Cargo` (
   PRIMARY KEY (`idCargo`))
 ENGINE = InnoDB;
 
-CREATE TABLE `Usuarios` (
-  `idUsuarios` INT NOT NULL,
+CREATE TABLE Usuarios (
+    `idUsuarios` INT NOT NULL,
   `Nombres` VARCHAR(45) NOT NULL,
   `Cedula` VARCHAR(10) NOT NULL,
   `Correo` VARCHAR(45) NOT NULL,
   `idCargo` INT NOT NULL,
-  PRIMARY KEY (`idUsuarios`),
-  INDEX `fk_Usuarios_Cargo_idx` (`idCargo` ASC),
-  CONSTRAINT `fk_Usuarios_Cargo`
-    FOREIGN KEY (`idCargo`)
-    REFERENCES `GidePalces`.`Cargo` (`idCargo`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+    PRIMARY KEY ('idUsuarios'),
+    CONSTRAINT FK_usercago FOREIGN KEY ('idCargo')
+    REFERENCES 'Cargo'('idCargo')
+);
+
+ 
 
 CREATE TABLE `Provincia` (
   `idProvincia` INT NOT NULL,
@@ -32,12 +30,8 @@ CREATE TABLE `Lugares` (
   `Descripcion` TEXT NOT NULL,
   `Ubicacion` TEXT NOT NULL,
   `idProvincia` INT NOT NULL,
-  PRIMARY KEY (`idLugares`),
-  INDEX `fk_Lugares_Provincia1_idx` (`idProvincia` ASC),
-  CONSTRAINT `fk_Lugares_Provincia1`
-    FOREIGN KEY (`idProvincia`)
-    REFERENCES `GidePalces`.`Provincia` (`idProvincia`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  PRIMARY KEY ('idLugares'),
+    CONSTRAINT 'FK_luarpro' FOREIGN KEY ('idProvincia')
+    REFERENCES 'Provincia'('idProvincia'));
+
 

@@ -5,13 +5,9 @@ include '../Conexion/Consultas.php';
 sleep(3);
 $IdUsuarios= $_POST['IdUs'];
 $Nombres= $_POST['nombres'];
-$Apellidos= $_POST['apellidos'];
 $Edad= $_POST['edad'];
 $Correo= $_POST['correo'];
-$Clave= md5($_POST['clave']);
-
-$phoneCliente= $_POST['clien-phone'];
-$emailCliente= $_POST['clien-email'];
+$Clave= $_POST['clave'];
 
 if(!$IdUsuarios=="" && !$Nombres=="" && !$Edad=="" && !$Correo=="" && !$Clave==""){
     $verificar=  ejecutarSQL::consultar("select * from Usuarios where idUsuarios='".$IdUsuarios."'");
