@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Registrar</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="views/estilos/estilo.css">
+        <link rel="stylesheet" href="views/estilos/estilohome.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+            <header>
+                    <input type="checkbox" id="btn-menu">
+                    <label for="btn-menu"><img scr="">
+                    </label>
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="home.html">Inicio</a></li>
+                            <li><a href="">Lugares</a></li>
+                            <li><a href="regUs.html">Registro</a></li>
+                            <li><a href="">Login</a></li>
+                        </ul>
+                    </nav>
+                    
+                    </header>
+
+                    <div class="container-fluid" id="options">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="breadcrumb">
+                                        <li>
+                                            <a href="regUs.html">Usuarios</a> <span class="divider">/</span>
+                                        </li>
+                                         <li>
+                                                <a href="regCar.html">Cargo</a> <span class="divider">/</span>
+                                            </li>
+                                        <li>
+                                            <a href="regLug.html">Lugares</a> <span class="divider">/</span>
+                                        </li>
+                                        <li>
+                                                <a href="regPro.html">Provincia</a> <span class="divider">/</span>
+                                            </li>
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="form-horizontal FormCatElec" action="Metodo/regCar.php" role="form" method="post" data-form="save">
+                            <br>
+                             <h2>REGISTRO DE PROVINCIA</h2>
+                             <br>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></div>
+                                    <input class="form-control all-elements-tooltip" type="text" placeholder="Ingrese el Id de la Provincia" required name="IdProvincia" data-toggle="tooltip" data-placement="top" title="Ingrese el Id de la Provincia (Solo numeros)" maxlength="30">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="	glyphicon glyphicon-user"></i></div>
+                                    <input class="form-control all-elements-tooltip" type="text" placeholder="Ingrese la Provincia del lugar turistico" required name="Provincia" data-toggle="tooltip" data-placement="top" title="Escriba el nombre de la Provincia" maxlength="30">
+                                </div>
+                            </div>
+                            <br>
+                            <p><button type="submit" class="btn btn-success btn-block"><i class="glyphicon glyphicon-ok"></i>&nbsp; Registrarse</button></p> 
+                            <div class="ResForm" style="width: 100%; color: #fff; text-align: center; margin: 0;"></div>
+                    </form>

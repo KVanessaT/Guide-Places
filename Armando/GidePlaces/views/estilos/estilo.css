@@ -1,0 +1,44 @@
+
+body {
+    background-image: url(ecuador.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+}
+form{
+    width: 500px;
+    margin: auto;
+    background: rgba(0,0,0,0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+h2{
+color: rgb(255, 244, 244);
+text-align: center;
+margin: 0;
+font-size: 30px;
+margin-bottom: 20px;
+
+}
+input, button {
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+button {
+    align-content: center;
+    min-height: 70px;
+    max-height: 70px;
+    max-width: 150px;
+}
+
+#botom:hover{
+    cursor: pointer;
+}

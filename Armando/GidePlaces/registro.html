@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CONEXION BASICA</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+<body id="container-page-registration">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                        <form class="form-horizontal FormCatElec" action="Metodo/registro.php" role="form" method="post" data-form="save">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></div>
+                                    <input class="form-control all-elements-tooltip" type="text" placeholder="Ingrese el Id de Usuario" required name="IdUs" data-toggle="tooltip" data-placement="top" title="Ingrese el Id de Usuario" maxlength="30">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="	glyphicon glyphicon-user"></i></div>
+                                    <input class="form-control all-elements-tooltip" type="text" placeholder="Ingrese sus Nombres y Apellidos" required name="nombres" data-toggle="tooltip" data-placement="top" title="Escriba sus nombres y apellidos completos" maxlength="30">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+                                    <input class="form-control all-elements-tooltip" type="text" placeholder="Ingrese su numero de cedula" required name="edad" data-toggle="tooltip" data-placement="top" title="Ingrese su numero de cedula (maximo 10 numeron y sin guion" maxlength="10">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
+                                    <input class="form-control all-elements-tooltip" type="text" placeholder="Ingrese su Correo Electronico" required name="correo" data-toggle="tooltip" data-placement="top" title="ejemplo (...@gmail.com)" maxlength="100">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
+                                    <input class="form-control all-elements-tooltip" type="text" placeholder="Ingrase el Cargo que tiene" required name="clave" data-toggle="tooltip" data-placement="top" title="ejemplo (1 para Usuario y 2 para (administrador)">
+                                </div>
+                            </div>
+                            <br>
+                            <p><button type="submit" class="btn btn-success btn-block"><i class="glyphicon glyphicon-ok"></i>&nbsp; Registrarse</button></p>
+                            <div class="ResForm" style="width: 100%; color: #fff; text-align: center; margin: 0;"></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

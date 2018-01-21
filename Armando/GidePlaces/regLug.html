@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Registrar</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="views/estilos/estilo.css">
+        <link rel="stylesheet" href="views/estilos/estilohome.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+            <header>
+                    <input type="checkbox" id="btn-menu">
+                    <label for="btn-menu"><img scr="">
+                    </label>
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="home.html">Inicio</a></li>
+                            <li><a href="">Lugares</a></li>
+                            <li><a href="regUs.html">Registro</a></li>
+                            <li><a href="">Login</a></li>
+                        </ul>
+                    </nav>
+                    </header>
+                    <div class="container-fluid" id="options">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="breadcrumb">
+                                        <li>
+                                            <a href="regUs.html">Usuarios</a> <span class="divider">/</span>
+                                        </li>
+                                         <li>
+                                                <a href="regCar.html">Cargo</a> <span class="divider">/</span>
+                                            </li>
+                                        <li>
+                                            <a href="regLug.html">Lugares</a> <span class="divider">/</span>
+                                        </li>
+                                        <li>
+                                                <a href="regPro.html">Provincia</a> <span class="divider">/</span>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="form-horizontal FormCatElec" action="Metodo/regUs.php" role="form" method="post" data-form="save">
+                            <br>
+                             <h2>REGISTRO DE LUGARES</h2>
+                             <br>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></div>
+                                    <input class="form-control all-elements-tooltip" type="text" placeholder="Ingrese el Id del lugar turistico " required name="IdLugar" data-toggle="tooltip" data-placement="top" title="Ingrese el Id del lugar" maxlength="30">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="	glyphicon glyphicon-user"></i></div>
+                                    <input class="form-control all-elements-tooltip" type="text" placeholder="Ingrese el nombre del lugar turistico" required name="Nombre" data-toggle="tooltip" data-placement="top" title="Escriba muy claro del lugar turistico" maxlength="30">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+                                    <input class="form-control all-elements-tooltip" type="text" placeholder="Ingrese la descripcion" required name="Descripcion" data-toggle="tooltip" data-placement="top" title="Ingrese la descripcion bien detallada" maxlength="10">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
+                                    <input class="form-control all-elements-tooltip" type="text" placeholder="Subir Imagen" required name="Imagen" data-toggle="tooltip" data-placement="top" title="formatosa admitidos: JPG, GIF y PNG" maxlength="100">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></div>
+                                    <input class="form-control all-elements-tooltip" type="text" placeholder="Ingrase el id de la provinca" required name="idProvincia" data-toggle="tooltip" data-placement="top" title="Solo se admiten numeros">
+                                </div>
+                            </div>
+                            <br>
+                            <p><button type="submit" class="btn btn-success btn-block"><i class="glyphicon glyphicon-ok"></i>&nbsp; Registrarse</button></p> 
+                            <div class="ResForm" style="width: 100%; color: #fff; text-align: center; margin: 0;"></div>
+                    </form>
